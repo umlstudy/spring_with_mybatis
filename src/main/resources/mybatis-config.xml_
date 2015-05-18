@@ -3,20 +3,13 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
-    <settings>
-        <setting name="mapUnderscoreToCamelCase" value="true"/>
-    </settings>
-    <typeHandlers>
-        <typeHandler handler="com.hmkcode.spring.mybatis.LocalDateTypeHandler"/>
-    </typeHandlers>
-    	
-	<!--
+	<properties resource="jdbc.properties" />
+	
 	<typeAliases>
 		<package name="com.hmkcode.spring.mybatis.mapper" />
 	</typeAliases>
 	
-	<properties resource="jdbc.properties" />
+	<!--
 	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC" />
@@ -28,6 +21,7 @@
 			</dataSource>
 		</environment>
 	</environments>
+	-->
 	
 	<mappers>
 		<package name="com/hmkcode/spring/mybatis/testmapper" />
@@ -35,5 +29,4 @@
 		<mapper resource="com/sample/mybatis/UserMapper.xml" />
 		 -->
 	</mappers>
-	-->
 </configuration>
